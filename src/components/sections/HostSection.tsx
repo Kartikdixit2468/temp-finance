@@ -17,21 +17,21 @@ const industryPhotos = [
     imageUrl: '/images/1.jpg', // Drop your image path here (e.g., "/images/host-meeting-1.jpg")
     title: 'Industry Leader Interaction',
     subtitle: 'Discussion on Health Insurance Claim Transparency',
-    tag: 'Industry Summit',
+    tag: 'Conference Meet',
   },
   {
     id: 2,
     imageUrl: '/images/2.jpg', // Drop your image path here (e.g., "/images/host-meeting-2.jpg")
     title: 'Finance & Insurance Roundtable',
     subtitle: 'Collaborating on Consumer Protection & IRDAI Guidelines',
-    tag: 'Policy Exchange',
+    tag: 'Industry Summit',
   },
   {
     id: 3,
     imageUrl: '/images/3.jpg', // Drop your image path here (e.g., "/images/host-meeting-3.jpg")
     title: 'Executive Mentorship Meet',
     subtitle: 'Strategic insights with veteran insurance ecosystem leaders',
-    tag: 'Leadership Meet',
+    tag: 'Office Meet',
   },
 ];
 
