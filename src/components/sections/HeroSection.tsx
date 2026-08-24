@@ -12,16 +12,20 @@ export const HeroSection: React.FC = () => {
       id="hero"
       className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-8 sm:pt-8 sm:pb-10 md:pt-10 md:pb-12 text-center flex flex-col items-center"
     >
-      {/* TOP BADGE */}
-      <div className="inline-flex items-center gap-2.5 px-3.5 sm:px-4 py-1.5 rounded-full bg-white/95 shadow-sm border border-slate-200/90 text-blue-700 font-extrabold text-xs sm:text-sm tracking-wider uppercase mb-6 hover:shadow-md hover:border-blue-200 transition-all duration-300">
-        <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full overflow-hidden border border-slate-200 shadow-2xs shrink-0 flex items-center justify-center bg-white">
+      {/* TOP BADGE — Logo + Text as two separate compact elements */}
+      <div className="inline-flex flex-col items-center gap-3 mb-8">
+        {/* Logo */}
+        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border border-blue-100 shadow-md bg-white p-1.5">
           <img
             src="/Youfinance Logo.jpg"
             alt="YouFinance Logo"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-xl"
           />
         </div>
-        <span className="tracking-wide">PRESENTED BY YOUFINANCE</span>
+        {/* Text badge */}
+        <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/95 border border-slate-200/90 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
+          <span className="text-blue-700 font-extrabold text-sm sm:text-base tracking-widest uppercase">PRESENTED BY YOUFINANCE</span>
+        </div>
       </div>
 
       {/* ALL CAPS SHORT HEADLINE */}
