@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <linearGradient id="vsl-bg" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF" />
+      <stop offset="100%" stop-color="#DBEAFE" />
+    </linearGradient>
+    <linearGradient id="vsl-suit" x1="0" y1="0" x2="0" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="500" rx="32" fill="url(#vsl-bg)" />
+  
+  <!-- Subtle circular grid -->
+  <circle cx="200" cy="200" r="130" fill="#BFDBFE" opacity="0.4" />
+  
+  <!-- Body / Silhouette -->
+  <path d="M80,500 L80,390 C80,330 120,310 170,300 L230,300 C280,310 320,330 320,390 L320,500 Z" fill="url(#vsl-suit)" />
+  
+  <!-- Shirt & Tie -->
+  <polygon points="180,300 220,300 212,400 188,400" fill="#FFFFFF" />
+  <polygon points="196,305 204,305 208,380 200,405 192,380" fill="#2563EB" />
+  
+  <!-- Head & Hair -->
+  <ellipse cx="200" cy="210" rx="60" ry="75" fill="#FFDFC4" />
+  <path d="M140,190 C140,135 165,120 200,120 C235,120 260,135 260,190 C260,170 245,145 200,145 C155,145 140,170 140,190 Z" fill="#1E293B" />
+  
+  <!-- Glasses -->
+  <rect x="160" y="195" width="30" height="22" rx="5" fill="none" stroke="#1E293B" stroke-width="3.5" />
+  <rect x="210" y="195" width="30" height="22" rx="5" fill="none" stroke="#1E293B" stroke-width="3.5" />
+  <line x1="190" y1="205" x2="210" y2="205" stroke="#1E293B" stroke-width="3.5" />
+  <circle cx="175" cy="206" r="3.5" fill="#0F172A" />
+  <circle cx="225" cy="206" r="3.5" fill="#0F172A" />
+  <path d="M185,250 Q200,262 215,250" fill="none" stroke="#A75A38" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- Play Workshop Badge Overlay -->
+  <g transform="translate(60, 420)">
+    <rect width="280" height="52" rx="26" fill="#1B64F2" filter="drop-shadow(0 8px 20px rgba(27,100,242,0.35))" />
+    <circle cx="30" cy="26" r="16" fill="#FFFFFF" />
+    <polygon points="26,19 38,26 26,33" fill="#1B64F2" />
+    <text x="58" y="24" font-family="sans-serif" font-size="12" font-weight="900" fill="#FFFFFF">MEET ME LIVE IN THE WORKSHOP</text>
+    <text x="58" y="38" font-family="sans-serif" font-size="10" font-weight="600" fill="#DBEAFE">Saturday, 23 Aug • 7:00 PM IST</text>
+  </g>
+</svg>
