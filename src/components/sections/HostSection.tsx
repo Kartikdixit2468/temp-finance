@@ -16,14 +16,14 @@ const industryPhotos = [
     id: 1,
     imageUrl: '/images/1.jpg', // Drop your image path here (e.g., "/images/host-meeting-1.jpg")
     title: 'Niranjan Hiranandani',
-    subtitle: 'From Chartered Accountant to educator to co-founder of the Hiranandani Group — one of India's top real estate names.',
+    subtitle: 'From Chartered Accountant to educator to co-founder of the Hiranandani Group — one of India\'s top real estate names.',
     tag: 'Real Estate',
   },
   {
     id: 2,
     imageUrl: '/images/2.jpg', // Drop your image path here (e.g., "/images/host-meeting-2.jpg")
     title: 'Shantanu Naidu',
-    subtitle: 'General Manager and personal assistant to late Sir Ratan Tata Ji — a close aide within one of India's most trusted business houses.',
+    subtitle: 'General Manager and personal assistant to late Sir Ratan Tata Ji — a close aide within one of India\'s most trusted business houses.',
     tag: 'Tata Group',
   },
   {
