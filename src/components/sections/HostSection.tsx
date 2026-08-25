@@ -15,23 +15,23 @@ const industryPhotos = [
   {
     id: 1,
     imageUrl: '/images/1.jpg', // Drop your image path here (e.g., "/images/host-meeting-1.jpg")
-    title: 'Industry Leader Interaction',
-    subtitle: 'Discussion on Health Insurance Claim Transparency',
-    tag: 'Conference Meet',
+    title: 'Niranjan Hiranandani',
+    subtitle: 'From Chartered Accountant to educator to co-founder of the Hiranandani Group — one of India's top real estate names.',
+    tag: 'Real Estate',
   },
   {
     id: 2,
     imageUrl: '/images/2.jpg', // Drop your image path here (e.g., "/images/host-meeting-2.jpg")
-    title: 'Finance & Insurance Roundtable',
-    subtitle: 'Collaborating on Consumer Protection & IRDAI Guidelines',
-    tag: 'Industry Summit',
+    title: 'Shantanu Naidu',
+    subtitle: 'General Manager and personal assistant to late Sir Ratan Tata Ji — a close aide within one of India's most trusted business houses.',
+    tag: 'Tata Group',
   },
   {
     id: 3,
     imageUrl: '/images/3.jpg', // Drop your image path here (e.g., "/images/host-meeting-3.jpg")
-    title: 'Executive Mentorship Meet',
-    subtitle: 'Strategic insights with veteran insurance ecosystem leaders',
-    tag: 'Office Meet',
+    title: 'Sanjay Singh',
+    subtitle: 'The man behind exposing the ₹30,000 crore stamp paper (Telgi) scam',
+    tag: 'Telgi Scam Exposé',
   },
 ];
 
@@ -154,13 +154,13 @@ export const HostSection: React.FC = () => {
           <div className="text-center max-w-2xl mx-auto mb-8">
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-blue-50 text-blue-600 font-extrabold text-xs tracking-wider uppercase mb-2">
               <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-              <span>Industry Network & Ecosystem</span>
+              <span>Along The Way</span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Engaging with Industry Leaders & Pioneers
+              People Whose Journeys Have Shaped Our Thinking
             </h3>
             <p className="text-slate-500 text-sm mt-2">
-              Bringing deep sector insights straight from trusted industry interactions and policy forums.
+              A few moments along the way — with people whose journeys reflect the same values this masterclass is built around: trust, integrity and long-term thinking.
             </p>
           </div>
 
