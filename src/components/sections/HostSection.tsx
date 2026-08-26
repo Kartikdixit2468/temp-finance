@@ -35,13 +35,14 @@ const industryPhotos = [
   },
 ];
 
-// 📰 MEDIA NEWS PORTALS FEATURED CONFIGURATION
-const mediaFeatures = [
-  { name: 'The Economic Times', category: 'Financial Press' },
-  { name: 'Business Standard', category: 'Industry News' },
-  { name: 'Mint', category: 'Economy & Wealth' },
-  { name: 'Financial Express', category: 'Market Insights' },
-  { name: 'Zee Business', category: 'Consumer Finance' },
+// 📰 MEDIA LOGO SLIDER CONFIGURATION
+const mediaLogos = [
+  { src: '/images/media/tits.png', alt: 'The Economic Times' },
+  { src: '/images/media/icon.webp', alt: 'BS' },
+  { src: '/images/media/bs.png', alt: 'Business Standard' },
+  { src: '/images/media/mint.png', alt: 'Mint' },
+  { src: '/images/media/zee.png', alt: 'Zee Business' },
+  { src: '/images/media/FE.png', alt: 'Financial Express' },
 ];
 
 export const HostSection: React.FC = () => {
@@ -53,7 +54,7 @@ export const HostSection: React.FC = () => {
       <div className="bg-white/85 backdrop-blur-md rounded-3xl p-5 sm:p-8 lg:p-10 border border-slate-100 shadow-soft-card">
         {/* TOP ROW: PORTRAIT + BIO */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          
+
           {/* LEFT COLUMN: HOST PORTRAIT */}
           <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
             <div className="relative w-full max-w-xs sm:max-w-sm h-[380px] sm:h-[440px] bg-gradient-to-b from-blue-600 to-blue-700 rounded-t-[160px] rounded-b-3xl shadow-xl flex items-end justify-center overflow-hidden pt-8">
@@ -112,7 +113,7 @@ export const HostSection: React.FC = () => {
             </p>
 
             <div className="w-12 h-1 bg-blue-600 rounded-full mb-8"></div>
-            
+
             <h3 className="text-xs sm:text-sm font-extrabold text-slate-500 tracking-wider mb-4">
               Why Learn from Yash?
             </h3>
@@ -215,31 +216,27 @@ export const HostSection: React.FC = () => {
           </div>
         </div>
 
-        {/* 📰 MEDIA RECOGNITION & PRESS FEATURES LOGO STRIP */}
+        {/* 📰 MEDIA RECOGNITION & PRESS FEATURES LOGO SLIDER */}
         <div className="mt-12 pt-8 border-t border-slate-100">
           <div className="text-center mb-6">
             <span className="text-xs font-extrabold text-slate-400 uppercase tracking-widest block">
-              Featured Across Leading Media & Financial Portals
+              Featured Across Leading Media &amp; Financial Portals
             </span>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 lg:gap-6">
-            {mediaFeatures.map((media, idx) => (
-              <div
-                key={idx}
-                className="px-4 py-2.5 bg-slate-50 hover:bg-blue-50/70 border border-slate-200/80 hover:border-blue-200 rounded-xl flex items-center gap-2.5 shadow-sm transition-all duration-300 group cursor-default"
-              >
-                <div className="w-2 h-2 rounded-full bg-blue-500 group-hover:scale-125 transition-transform"></div>
-                <div className="text-left">
-                  <span className="text-xs sm:text-sm font-black text-slate-800 tracking-tight block group-hover:text-blue-700 transition-colors">
-                    {media.name}
-                  </span>
-                  <span className="text-[10px] text-slate-400 font-medium block">
-                    {media.category}
-                  </span>
-                </div>
-              </div>
-            ))}
+          {/* Infinite marquee slider */}
+          <div className="relative overflow-hidden">
+            {/* Scrolling track — duplicated for seamless loop */}
+            <div className="flex items-center animate-marquee" style={{ width: 'max-content' }}>
+              {[...mediaLogos, ...mediaLogos].map((logo, idx) => (
+                <img
+                  key={idx}
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="mx-5 sm:mx-10 h-7 sm:h-12 w-auto max-w-[90px] sm:max-w-[150px] object-contain shrink-0"
+                />
+              ))}
+            </div>
           </div>
         </div>
 
