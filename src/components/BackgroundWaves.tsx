@@ -38,21 +38,6 @@ export const BackgroundWaves: React.FC = () => {
         </defs>
       </svg>
 
-      {/* Background Watermark Shield Graphic (Left) */}
-      <div className="absolute top-[280px] -left-16 w-80 h-80 opacity-20 pointer-events-none text-blue-400 z-0 hidden lg:block">
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="w-full h-full"
-        >
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-          <path d="m9 12 2 2 4-4" />
-        </svg>
-      </div>
 
       {/* Background Dot Grid Pattern (Right) */}
       <div className="absolute top-20 right-8 w-36 h-36 opacity-30 pointer-events-none hidden md:block z-0">

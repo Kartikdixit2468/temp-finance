@@ -10,11 +10,6 @@ export const StickyFooter: React.FC = () => {
       id="sticky-youfinance-footer"
       className="fixed bottom-0 left-0 right-0 z-40 block w-full bg-white/95 backdrop-blur-xl text-slate-900 border-t border-slate-200/90 shadow-[0_-10px_30px_rgba(15,23,42,0.08)]"
     >
-      {/* Background Low-Opacity Chair Graphic Silhouette */}
-      <div className="absolute right-10 sm:right-36 -bottom-6 opacity-[0.03] text-blue-600 pointer-events-none select-none -z-0">
-        <Armchair className="w-56 h-56 sm:w-80 sm:h-80" strokeWidth={1} />
-      </div>
-
       {/* Ambient Radial Blue Glow */}
       <div className="absolute left-1/4 top-0 w-80 sm:w-96 h-32 rounded-full bg-blue-500/5 blur-3xl pointer-events-none -z-0" />
 
