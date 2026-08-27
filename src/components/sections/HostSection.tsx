@@ -155,13 +155,13 @@ export const HostSection: React.FC = () => {
           <div className="text-center max-w-2xl mx-auto mb-8">
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-blue-50 text-blue-600 font-extrabold text-xs tracking-wider uppercase mb-2">
               <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-              <span>Industry Network & Ecosystem</span>
+              <span>Along The Way</span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Engaging with Industry Leaders & Pioneers
+              People Whose Journeys Have Shaped Our Thinking
             </h3>
             <p className="text-slate-500 text-sm mt-2">
-              Bringing deep sector insights straight from trusted industry interactions and policy forums.
+              A few moments along the way — with people whose journeys reflect the same values this masterclass is built around: trust, integrity and long-term thinking.
             </p>
           </div>
 
