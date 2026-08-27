@@ -31,7 +31,7 @@ export const StickyFooter: React.FC = () => {
             <div className="flex flex-col min-w-0">
               <div className="flex items-center gap-x-2 gap-y-0.5 flex-wrap">
                 <h4 className="text-sm sm:text-base md:text-lg font-black tracking-tight text-slate-950 leading-tight whitespace-nowrap">
-                  You<span className="text-blue-600">finance</span> School
+                  You<span className="text-yellow-600">finance</span> School
                 </h4>
 
                 {/* Green Blinking Dot + Live Badge */}
