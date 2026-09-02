@@ -26,10 +26,10 @@ const testimonialsList: TestimonialItem[] = [
   {
     id: 1,
     imageUrl: '/images/TEST1.jpg', 
-    author: 'Rahul Mehta',
+    author: 'Ahana Singh',
     location: 'Mumbai',
-    tag: 'Claim Settled Smoothly',
-    highlight: 'Saved ₹3.2 Lakhs during father’s hospitalization after policy audit.',
+    tag: 'Maternity Cover & Claims',
+    highlight: 'Guided client to pick the right maternity plan and secured a smooth, zero-surprise claim.',
     rating: 5,
   },
   {
