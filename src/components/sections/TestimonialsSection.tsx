@@ -88,12 +88,12 @@ const TestimonialCard: React.FC<{ item: TestimonialItem; onOpenImage: (item: Tes
   return (
     <div
       onClick={() => hasImage && onOpenImage(item)}
-      className={`tap-card group bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-xs hover:shadow-md hover:border-blue-300 transition-all duration-300 flex flex-col justify-between ${
+      className={`tap-card group bg-white rounded-2xl border border-slate-200/80 overflow-hidden shadow-xs hover:shadow-md hover:border-blue-300 transition-all duration-300 flex flex-col h-full ${
         hasImage ? 'cursor-pointer' : ''
       }`}
     >
       {/* TOP PREVIEW AREA */}
-      <div className="relative aspect-[4/3] bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-100 flex items-center justify-center overflow-hidden border-b border-slate-100 p-4 pt-14">
+      <div className="relative h-56 sm:h-64 w-full bg-slate-50 flex items-center justify-center overflow-hidden border-b border-slate-100 p-2">
         {hasImage ? (
           <>
             <img
@@ -128,41 +128,41 @@ const TestimonialCard: React.FC<{ item: TestimonialItem; onOpenImage: (item: Tes
             <span className="text-[11px] text-slate-400">{item.location}</span>
           </div>
         )}
-
-        {/* Tag Badge */}
-        <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-full text-[11px] font-extrabold text-blue-700 shadow-xs border border-blue-100">
-          {item.tag}
-        </div>
       </div>
 
       {/* CARD CONTENT */}
-      <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between bg-white">
-        <div>
-          {/* Rating Stars */}
-          <div className="flex items-center gap-1 mb-2 text-amber-400">
+      <div className="p-4 sm:p-5 flex-1 flex flex-col bg-white">
+        {/* Tag & Rating row */}
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+          <div className="bg-blue-50 px-2.5 py-1 rounded-md text-[11px] font-extrabold text-blue-700 border border-blue-100/50">
+            {item.tag}
+          </div>
+          <div className="flex items-center gap-0.5 text-amber-400">
             {[...Array(item.rating)].map((_, i) => (
               <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
             ))}
           </div>
-          {/* Highlight Quote */}
-          <div className="flex items-start gap-2 mb-3">
-            <MessageSquareQuote className="w-4 h-4 text-blue-500 shrink-0 mt-0.5 opacity-80" />
-            <p className="text-xs sm:text-sm font-semibold text-slate-800 leading-relaxed">
-              "{item.highlight}"
-            </p>
-          </div>
         </div>
+
+        {/* Highlight Quote */}
+        <div className="flex items-start gap-2 mb-4 flex-1">
+          <MessageSquareQuote className="w-4 h-4 text-blue-500 shrink-0 mt-0.5 opacity-80" />
+          <p className="text-xs sm:text-sm font-semibold text-slate-800 leading-relaxed">
+            "{item.highlight}"
+          </p>
+        </div>
+
         {/* Client Info */}
-        <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+        <div className="pt-3 border-t border-slate-100 flex items-center justify-between mt-auto">
           <div>
-            <span className="font-extrabold text-slate-900 block">{item.author}</span>
+            <span className="font-extrabold text-slate-900 block text-xs sm:text-sm">{item.author}</span>
             {item.location && (
               <span className="text-slate-400 text-[11px] font-medium">{item.location}</span>
             )}
           </div>
-          <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600">
+          <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full">
             <CheckCircle2 className="w-3 h-3" />
-            <span>Verified Client</span>
+            <span>Verified</span>
           </span>
         </div>
       </div>
