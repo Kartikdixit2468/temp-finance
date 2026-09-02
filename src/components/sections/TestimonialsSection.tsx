@@ -93,14 +93,14 @@ const TestimonialCard: React.FC<{ item: TestimonialItem; onOpenImage: (item: Tes
       }`}
     >
       {/* TOP PREVIEW AREA */}
-      <div className="relative aspect-[4/3] bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-100 flex items-center justify-center overflow-hidden border-b border-slate-100">
+      <div className="relative aspect-[4/3] bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-100 flex items-center justify-center overflow-hidden border-b border-slate-100 p-4 pt-14">
         {hasImage ? (
           <>
             <img
               src={item.imageUrl}
               alt={`${item.author} feedback`}
               onError={handleError}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
             />
             {/* Desktop hover overlay */}
             <div className="hidden sm:flex absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity items-center justify-center">
