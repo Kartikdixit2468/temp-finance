@@ -353,7 +353,7 @@ export const Modal: React.FC = () => {
             <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200 mb-5 text-left space-y-2.5 text-xs sm:text-sm">
               <div className="flex items-center gap-3">
                 <Calendar className="w-4 h-4 text-blue-600 shrink-0" />
-                <span className="font-bold text-slate-800">Saturday, 23 August 2026</span>
+                <span className="font-bold text-slate-800">Friday, 11 September 2026</span>
               </div>
               <div className="flex items-center gap-3">
                 <Clock className="w-4 h-4 text-blue-600 shrink-0" />
