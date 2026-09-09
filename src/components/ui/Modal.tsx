@@ -183,7 +183,7 @@ export const Modal: React.FC = () => {
               THE HEALTH INSURANCE PLAYBOOK
             </h3>
             <p className="text-xs sm:text-sm text-slate-500 mb-5">
-              Live with Yash Singh (Youfinanceschool) • Sat, 23 Aug at 7:00 PM IST
+              Live with Yash Singh (Youfinanceschool) • Fri, 11 Sep at 7:00 PM IST
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-3.5">
