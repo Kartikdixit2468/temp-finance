@@ -183,7 +183,7 @@ export const Modal: React.FC = () => {
               THE HEALTH INSURANCE PLAYBOOK
             </h3>
             <p className="text-xs sm:text-sm text-slate-500 mb-5">
-              Live with Yash Singh (Youfinanceschool) • Fri, 11 Sep at 7:00 PM IST
+              Live with Yash Singh (Youfinanceschool) • Wed, 16 Sep at 7:00 PM IST
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-3.5">
@@ -353,7 +353,7 @@ export const Modal: React.FC = () => {
             <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200 mb-5 text-left space-y-2.5 text-xs sm:text-sm">
               <div className="flex items-center gap-3">
                 <Calendar className="w-4 h-4 text-blue-600 shrink-0" />
-                <span className="font-bold text-slate-800">Friday, 11 September 2026</span>
+                <span className="font-bold text-slate-800"> Wednesday, 16 September 2026</span>
               </div>
               <div className="flex items-center gap-3">
                 <Clock className="w-4 h-4 text-blue-600 shrink-0" />
