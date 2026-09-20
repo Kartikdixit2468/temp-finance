@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   CheckCircle2,
 } from 'lucide-react';
+import { EVENT_CONFIG } from '../../config/event';
 
 // 💬 FAQ WHATSAPP SUPPORT LINK:
 export const FAQ_WHATSAPP_URL =
@@ -44,7 +45,7 @@ const faqs: FaqItem[] = [
   {
     id: 4,
     category: 'Schedule & Access',
-    question: 'What if I miss the live session at 7:00 PM IST?',
+    question: `What if I miss the live session at ${EVENT_CONFIG.timeDisplay}?`,
     answer:
       'Because this is a hands-on workshop featuring live teardowns and interactive Q&A, we strongly recommend attending live. However, all confirmed registrants will receive the Insurance Diagnostic E-Book, 10-Point Checklist, and bonus resources directly in the WhatsApp group.',
   },

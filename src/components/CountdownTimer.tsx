@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { EVENT_CONFIG } from '../config/event';
 
 interface TimeLeft {
   days: number;
@@ -79,7 +80,7 @@ interface CountdownTimerProps {
 }
 
 export const CountdownTimer: React.FC<CountdownTimerProps> = ({
-  targetDatetime = import.meta.env.VITE_EVENT_DATETIME,
+  targetDatetime = EVENT_CONFIG.datetime,
   className = '',
 }) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(() =>

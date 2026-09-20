@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Sparkles } from 'lucide-react';
 import { useModal } from '../context/ModalContext';
-
-// Read display strings from .env — change VITE_EVENT_DATE_DISPLAY & VITE_EVENT_TIME_DISPLAY
-// in your .env file to update both this header and the countdown simultaneously.
-const EVENT_DATE = import.meta.env.VITE_EVENT_DATE_DISPLAY ?? 'Wed, 26 Aug';
-const EVENT_TIME = import.meta.env.VITE_EVENT_TIME_DISPLAY ?? '6:00 PM IST';
+import { EVENT_CONFIG } from '../config/event';
 
 export const StickyHeader: React.FC = () => {
   const { openModal } = useModal();
@@ -47,9 +43,9 @@ export const StickyHeader: React.FC = () => {
 
             {/* DATE & TIME (from .env) */}
             <div className="inline-flex items-center gap-1.5 text-slate-700">
-              <span className="text-slate-900 font-extrabold">{EVENT_DATE}</span>
+              <span className="text-slate-900 font-extrabold">{EVENT_CONFIG.dateDisplay}</span>
               <span className="text-slate-400">•</span>
-              <span className="text-blue-600 font-extrabold">{EVENT_TIME}</span>
+              <span className="text-blue-600 font-extrabold">{EVENT_CONFIG.timeDisplay}</span>
               <span className="text-slate-500 text-[10px] sm:text-xs font-semibold hidden sm:inline">(Zoom)</span>
             </div>
 

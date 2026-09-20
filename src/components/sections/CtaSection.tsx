@@ -1,6 +1,7 @@
 import React from 'react';
 import { useModal } from '../../context/ModalContext';
 import { Button } from '../ui/Button';
+import { EVENT_CONFIG } from '../../config/event';
 import {
   CalendarCheck,
   Tag,
@@ -17,10 +18,6 @@ import {
   Award,
   CheckCircle2,
 } from 'lucide-react';
-
-// ─── Event config from .env ───────────────────────────────────────────────────
-const EVENT_DATE = import.meta.env.VITE_EVENT_DATE_DISPLAY ?? 'Wed, 26 Aug';
-const EVENT_TIME = import.meta.env.VITE_EVENT_TIME_DISPLAY ?? '6:00 PM IST';
 
 export const CtaSection: React.FC = () => {
   const { openModal } = useModal();
@@ -200,12 +197,12 @@ export const CtaSection: React.FC = () => {
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-6">
             <div className="flex items-center gap-2 px-4 py-2.5 bg-white rounded-xl border border-slate-200/80 text-slate-800 font-extrabold text-xs sm:text-sm shadow-xs">
               <CalendarCheck className="w-4 h-4 text-blue-600 shrink-0" />
-              <span>{EVENT_DATE}</span>
+              <span>{EVENT_CONFIG.dateDisplay}</span>
             </div>
 
             <div className="flex items-center gap-2 px-4 py-2.5 bg-white rounded-xl border border-slate-200/80 text-slate-800 font-extrabold text-xs sm:text-sm shadow-xs">
               <Clock className="w-4 h-4 text-blue-600 shrink-0" />
-              <span>{EVENT_TIME}</span>
+              <span>{EVENT_CONFIG.timeDisplay}</span>
             </div>
 
             <div className="flex items-center gap-2 px-4 py-2.5 bg-white rounded-xl border border-slate-200/80 text-slate-800 font-extrabold text-xs sm:text-sm shadow-xs">
