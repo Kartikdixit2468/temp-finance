@@ -1,7 +1,7 @@
 import React from 'react';
 import { useModal } from '../../context/ModalContext';
 import { Button } from '../ui/Button';
-import { EVENT_CONFIG } from '../../config/event';
+import { useEventConfig } from '../../context/EventConfigContext';
 import {
   CalendarCheck,
   Tag,
@@ -21,6 +21,7 @@ import {
 
 export const CtaSection: React.FC = () => {
   const { openModal } = useModal();
+  const { eventConfig } = useEventConfig();
 
   const deliverables = [
     {
@@ -197,12 +198,12 @@ export const CtaSection: React.FC = () => {
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-6">
             <div className="flex items-center gap-2 px-4 py-2.5 bg-white rounded-xl border border-slate-200/80 text-slate-800 font-extrabold text-xs sm:text-sm shadow-xs">
               <CalendarCheck className="w-4 h-4 text-blue-600 shrink-0" />
-              <span>{EVENT_CONFIG.dateDisplay}</span>
+              <span>{eventConfig.dateDisplay}</span>
             </div>
 
             <div className="flex items-center gap-2 px-4 py-2.5 bg-white rounded-xl border border-slate-200/80 text-slate-800 font-extrabold text-xs sm:text-sm shadow-xs">
               <Clock className="w-4 h-4 text-blue-600 shrink-0" />
-              <span>{EVENT_CONFIG.timeDisplay}</span>
+              <span>{eventConfig.timeDisplay}</span>
             </div>
 
             <div className="flex items-center gap-2 px-4 py-2.5 bg-white rounded-xl border border-slate-200/80 text-slate-800 font-extrabold text-xs sm:text-sm shadow-xs">

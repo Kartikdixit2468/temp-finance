@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Sparkles } from 'lucide-react';
 import { useModal } from '../context/ModalContext';
-import { EVENT_CONFIG } from '../config/event';
+import { useEventConfig } from '../context/EventConfigContext';
 
 export const StickyHeader: React.FC = () => {
   const { openModal } = useModal();
+  const { eventConfig } = useEventConfig();
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -43,9 +44,9 @@ export const StickyHeader: React.FC = () => {
 
             {/* DATE & TIME (from .env) */}
             <div className="inline-flex items-center gap-1.5 text-slate-700">
-              <span className="text-slate-900 font-extrabold">{EVENT_CONFIG.dateDisplay}</span>
+              <span className="text-slate-900 font-extrabold">{eventConfig.dateDisplay}</span>
               <span className="text-slate-400">•</span>
-              <span className="text-blue-600 font-extrabold">{EVENT_CONFIG.timeDisplay}</span>
+              <span className="text-blue-600 font-extrabold">{eventConfig.timeDisplay}</span>
               <span className="text-slate-500 text-[10px] sm:text-xs font-semibold hidden sm:inline">(Zoom)</span>
             </div>
 

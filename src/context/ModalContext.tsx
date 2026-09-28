@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { ReservationFormData } from '../types';
-import { EVENT_CONFIG } from '../config/event';
+import { useEventConfig } from './EventConfigContext';
 
 interface ModalContextType {
   isOpen: boolean;
@@ -15,6 +15,7 @@ interface ModalContextType {
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
 
 export const ModalProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const { eventConfig } = useEventConfig();
   const [isOpen, setIsOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -49,11 +50,11 @@ export const ModalProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       policyStatus: data.policyStatus,
       subscribeNewsletter: data.subscribeNewsletter,
       source: 'Health Insurance Playbook Masterclass',
-      eventDatetime: EVENT_CONFIG.datetime,
-      eventDate: EVENT_CONFIG.fullDateDisplay,
-      eventTime: EVENT_CONFIG.timeDisplay,
-      eventTimeRange: EVENT_CONFIG.timeRangeDisplay,
-      eventDurationMinutes: EVENT_CONFIG.durationMinutes,
+      eventDatetime: eventConfig.datetime,
+      eventDate: eventConfig.fullDateDisplay,
+      eventTime: eventConfig.timeDisplay,
+      eventTimeRange: eventConfig.timeRangeDisplay,
+      eventDurationMinutes: eventConfig.durationMinutes,
     };
 
     console.log('[ModalContext] 🚀 Submitting reservation...');

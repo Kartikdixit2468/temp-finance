@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { EVENT_CONFIG } from '../config/event';
+import { useEventConfig } from '../context/EventConfigContext';
 
 interface TimeLeft {
   days: number;
@@ -80,20 +80,24 @@ interface CountdownTimerProps {
 }
 
 export const CountdownTimer: React.FC<CountdownTimerProps> = ({
-  targetDatetime = EVENT_CONFIG.datetime,
+  targetDatetime,
   className = '',
 }) => {
+  const { eventConfig } = useEventConfig();
+  const resolvedTargetDatetime = targetDatetime || eventConfig.datetime;
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(() =>
-    calculateTimeLeft(targetDatetime)
+    calculateTimeLeft(resolvedTargetDatetime)
   );
 
   useEffect(() => {
-    if (timeLeft.expired) return;
+    setTimeLeft(calculateTimeLeft(resolvedTargetDatetime));
     const id = setInterval(() => {
-      setTimeLeft(calculateTimeLeft(targetDatetime));
+      const next = calculateTimeLeft(resolvedTargetDatetime);
+      setTimeLeft(next);
+      if (next.expired) clearInterval(id);
     }, 1000);
     return () => clearInterval(id);
-  }, [targetDatetime, timeLeft.expired]);
+  }, [resolvedTargetDatetime]);
 
   if (timeLeft.expired) {
     return (

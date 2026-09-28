@@ -16,41 +16,44 @@ import { FaqSection } from './components/sections/FaqSection';
 import { Footer } from './components/Footer';
 import { StickyFooter } from './components/StickyFooter';
 import { Modal } from './components/ui/Modal';
+import { EventConfigProvider } from './context/EventConfigContext';
 
 export default function App() {
   return (
-    <ModalProvider>
-      <div className="relative min-h-screen bg-wave-pattern overflow-hidden text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
-        {/* Ambient SVG Waves, Watermarks & Gradients */}
-        <BackgroundWaves />
+    <EventConfigProvider>
+      <ModalProvider>
+        <div className="relative min-h-screen bg-wave-pattern overflow-hidden text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+          {/* Ambient SVG Waves, Watermarks & Gradients */}
+          <BackgroundWaves />
 
-        {/* Sticky Live Masterclass Top Strip */}
-        <StickyHeader />
+          {/* Sticky Live Masterclass Top Strip */}
+          <StickyHeader />
 
-        {/* Modular Landing Page Sections */}
-        <main className="relative z-10">
-          <HeroSection />
-          <ProblemSection />
-          <HiddenStatsSection />
-          <TestimonialsSection />
-          <WhatYouLearnSection />
-          <HostSection />
-          <AudienceSection />
-          <WhyYouFinanceSection />
-          <VslSection />
-          <CtaSection />
-          <FaqSection />
-        </main>
+          {/* Modular Landing Page Sections */}
+          <main className="relative z-10">
+            <HeroSection />
+            <ProblemSection />
+            <HiddenStatsSection />
+            <TestimonialsSection />
+            <WhatYouLearnSection />
+            <HostSection />
+            <AudienceSection />
+            <WhyYouFinanceSection />
+            <VslSection />
+            <CtaSection />
+            <FaqSection />
+          </main>
 
-        {/* Global Copyright Footer */}
-        <Footer />
+          {/* Global Copyright Footer */}
+          <Footer />
 
-        {/* Sticky YouFinance School Bottom Strip */}
-        <StickyFooter />
+          {/* Sticky YouFinance School Bottom Strip */}
+          <StickyFooter />
 
-        {/* Global Interactive Registration Modal */}
-        <Modal />
-      </div>
-    </ModalProvider>
+          {/* Global Interactive Registration Modal */}
+          <Modal />
+        </div>
+      </ModalProvider>
+    </EventConfigProvider>
   );
 }

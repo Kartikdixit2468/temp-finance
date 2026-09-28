@@ -7,7 +7,7 @@ import {
   ShieldCheck,
   CheckCircle2,
 } from 'lucide-react';
-import { EVENT_CONFIG } from '../../config/event';
+import { useEventConfig } from '../../context/EventConfigContext';
 
 // 💬 FAQ WHATSAPP SUPPORT LINK:
 export const FAQ_WHATSAPP_URL =
@@ -20,7 +20,7 @@ interface FaqItem {
   answer: string;
 }
 
-const faqs: FaqItem[] = [
+const getFaqs = (eventTime: string): FaqItem[] => [
   {
     id: 1,
     category: 'Free & Transparent',
@@ -45,7 +45,7 @@ const faqs: FaqItem[] = [
   {
     id: 4,
     category: 'Schedule & Access',
-    question: `What if I miss the live session at ${EVENT_CONFIG.timeDisplay}?`,
+    question: `What if I miss the live session at ${eventTime}?`,
     answer:
       'Because this is a hands-on workshop featuring live teardowns and interactive Q&A, we strongly recommend attending live. However, all confirmed registrants will receive the Insurance Diagnostic E-Book, 10-Point Checklist, and bonus resources directly in the WhatsApp group.',
   },
@@ -59,6 +59,8 @@ const faqs: FaqItem[] = [
 ];
 
 export const FaqSection: React.FC = () => {
+  const { eventConfig } = useEventConfig();
+  const faqs = getFaqs(eventConfig.timeDisplay);
   // Keep first FAQ open by default for immediate preview
   const [openId, setOpenId] = useState<number | null>(1);
 
