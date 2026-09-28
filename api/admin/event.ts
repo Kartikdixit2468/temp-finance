@@ -1,6 +1,6 @@
-import { getAdminSession } from '../_auth';
-import { readStoredEventConfig, updateStoredEventConfig } from '../_github';
-import { isSameOriginRequest, jsonResponse, methodNotAllowed } from '../_response';
+import { getAdminSession } from '../_auth.js';
+import { readStoredEventConfig, updateStoredEventConfig } from '../_github.js';
+import { isSameOriginRequest, jsonResponse, methodNotAllowed } from '../_response.js';
 
 const LOCAL_DATETIME_PATTERN = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/;
 

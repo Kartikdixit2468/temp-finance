@@ -1,5 +1,5 @@
-import { getAdminSession } from '../_auth';
-import { jsonResponse, methodNotAllowed } from '../_response';
+import { getAdminSession } from '../_auth.js';
+import { jsonResponse, methodNotAllowed } from '../_response.js';
 
 export default {
   async fetch(request: Request): Promise<Response> {

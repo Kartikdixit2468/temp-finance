@@ -1,5 +1,5 @@
-import { clearSessionCookie } from '../_auth';
-import { isSameOriginRequest, jsonResponse, methodNotAllowed } from '../_response';
+import { clearSessionCookie } from '../_auth.js';
+import { isSameOriginRequest, jsonResponse, methodNotAllowed } from '../_response.js';
 
 export default {
   async fetch(request: Request): Promise<Response> {

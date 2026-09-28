@@ -2,8 +2,8 @@ import {
   createSessionCookie,
   createSessionToken,
   verifyAdminCredentials,
-} from '../_auth';
-import { isSameOriginRequest, jsonResponse, methodNotAllowed } from '../_response';
+} from '../_auth.js';
+import { isSameOriginRequest, jsonResponse, methodNotAllowed } from '../_response.js';
 
 export default {
   async fetch(request: Request): Promise<Response> {
